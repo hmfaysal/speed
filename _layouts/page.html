@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--
+====================================================
+    __  ____  ______________  _______ ___    __ 
+   / / / /  |/  / ____/   \ \/ / ___//   |  / / 
+  / /_/ / /|_/ / /_  / /| |\  /\__ \/ /| | / /  
+ / __  / /  / / __/ / ___ |/ /___/ / ___ |/ /___
+/_/ /_/_/  /_/_/   /_/  |_/_//____/_/  |_/_____/
+                                                     
+====================================================
+Owner Name: Hossain Mohammad Faysal
+Profile: https://www.facebook.com/hmfaysal
+Version: 1.1
+Description: Awesome dude, awesome life
+====================================================
+-->
+<head>
+{% include head.html %}
+</head>
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
+<div id="page">
+{% include postheader.html %}
+<div id="main" class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+<div class="main">
+    <div class="w-container">
+      
+      <article class="post_article">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-content">{{ content }}</div>
+      </article>
+      
+        
+    </div>
+  </div>
+{% include footer.html %}
+</div> <!-- Closing #page div-->
+</body>
+</html>
