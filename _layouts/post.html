@@ -23,29 +23,23 @@ Description: Awesome dude, awesome life
 {% include postheader.html %}
 <div id="main" class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
 <div class="main">
-    <div class="w-container">
-      
-      <article class="post_article">
-        <h1 class="post-title">{{ page.title }}</h1>{% if page.featured %}<span class="featured-post">FEATURED</span>{% endif %}
-         <div class="post-meta">by <span class="author">{{ site.owner.name }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time> in{% for tag in page.categories %}<a href="{{ site.url }}/categories/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</div>
-        <div class="post-content">{{ content }}</div>
-        {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<br><i class="fa fa-tags"></i> Tagged with: {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %}
-        <div class="separator-short"></div>
-      </article>
+<div class="w-container">
+<article class="post_article">
+<h1 class="post-title">{{ page.title }}</h1>{% if page.featured %}<span class="featured-post">FEATURED</span>{% endif %}
+<div class="post-meta">by <span class="author">{{ site.owner.name }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time> in{% for tag in page.categories %}<a href="{{ site.url }}/categories/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</div>
+<div class="post-content">{{ content }}</div>
+{% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<br><i class="fa fa-tags"></i> Tagged with: {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %}
+<div class="separator-short"></div>
+</article>
 {% include share.html %}
-      <div class="separator-long"></div>
-      
+<div class="separator-long"></div>
 {% include signoff.html %}
-      
-<div class="separator-long"></div>	
-    <div id="disqus_thread"></div>
-    {% if site.disqus_shortname and page.comments == true %}{% include disqus_comments.html %}{% endif %}
-    
-      
-    	
-    </div>
-  </div>
+<div class="separator-long"></div>
+<div id="disqus_thread"></div>
+{% if site.disqus_shortname and page.comments == true %}{% include disqus_comments.html %}{% endif %}
+</div>
+</div>
 {% include footer.html %}
-</div> <!-- Closing #page div-->
+</div>
 </body>
 </html>

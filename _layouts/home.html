@@ -21,27 +21,27 @@ Description: Awesome dude, awesome life
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
 <div id="page">
 {% include header.html %}
-    <div class="main">
-        <div class="w-container">
-                {{ content }}
-	        <div class="pagination">
-	            <nav class="pagination" role="pagination">
-	                {% if paginator.previous_page %}
-	    			{% if paginator.previous_page == 1 %}
-	    			<a class="newer-posts" href="{{ site.url }}"><ul><li>Newer posts</li><li>&larr;</li></ul></a>
-	    			{% else %}
-	    			<a class="newer-posts" href="{{ site.url }}/page{{ paginator.previous_page }}"><ul><li>Newer posts</li><li>&larr;</li></ul></a>
-	    			{% endif %}
-	    			{% endif %}
-	    			<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	    			{% if paginator.next_page %}
-	        		<a class="older-posts" href="{{ site.url }}/page{{ paginator.next_page }}/"><ul><li>Older posts</li><li>&rarr;</li></ul></a>
-	    			{% endif %}
-				</nav>
-	        </div>
-        </div>
-    </div>
+<div class="main">
+<div class="w-container">
+{{ content }}
+<div class="pagination">
+<nav class="pagination" role="pagination">
+{% if paginator.previous_page %}
+{% if paginator.previous_page == 1 %}
+<a class="newer-posts" href="{{ site.url }}"><ul><li>Newer posts</li><li>&larr;</li></ul></a>
+{% else %}
+<a class="newer-posts" href="{{ site.url }}/page{{ paginator.previous_page }}"><ul><li>Newer posts</li><li>&larr;</li></ul></a>
+{% endif %}
+{% endif %}
+<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+{% if paginator.next_page %}
+<a class="older-posts" href="{{ site.url }}/page{{ paginator.next_page }}/"><ul><li>Older posts</li><li>&rarr;</li></ul></a>
+{% endif %}
+</nav>
+</div>
+</div>
+</div>
 {% include footer.html %}
-</div> <!-- Closing #page div--> 
+</div>
 </body>
 </html>

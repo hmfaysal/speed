@@ -1,27 +1,19 @@
- <header style="background-image: url({{ site.url }}/images/{{ site.cover }})">
-                     
-    <div class="w-container">
-      <div class="w-row">       
-           <div class="w-col w-col-6 w-col-small-6 logo-column">
-              
-              	<a class="logo" href="{{ site.url }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="HMFAYSAL Logo" /></a>
-              
-           </div>
-           <div class="w-col w-col-6 w-col-small-6 menu_wraper">
-             
-             
-                  
-                    
-          </div>
-        </div>
-        <h1 class="blog-title">{{ site.title | upcase }}</h1>
-        <h2 class="blog-description">{{ site.description }}</h2> 
-        <div class="social-column">
-        	<a class="w-inline-block social" href="#" target="_blank"> <i class="fa fa-facebook fa-lg"></i></a>
-            <a class="w-inline-block social" href="#" target="_blank"> <i class="fa fa-twitter fa-lg"></i></a>
-            <a class="w-inline-block social" href="#" target="_blank"> <i class="fa fa-instagram fa-lg"></i></a>
-            <a class="w-inline-block social" href="#" target="_blank"> <i class="fa fa-linkedin fa-lg"></i></a>
-       </div> 
-              
-     </div>    
-  </header>
+<header style="background-image:url({{site.url}}/images/{{site.cover}})">
+<div class="w-container">
+<div class="w-row">
+<div class="w-col w-col-6 w-col-small-6 logo-column">
+<a class="logo" href="{{ site.url }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="HMFAYSAL Logo" /></a>
+</div>
+<div class="w-col w-col-6 w-col-small-6 menu_wraper">
+</div>
+</div>
+<h1 class="blog-title">{{ site.title | upcase }}</h1>
+<h2 class="blog-description">{{ site.description }}</h2>
+<div class="social-column">
+<a class="w-inline-block social" href="http://facebook.com/{{ site.owner.facebook }}" target="_blank"> <i class="fa fa-facebook fa-lg"></i></a>
+<a class="w-inline-block social" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"> <i class="fa fa-twitter fa-lg"></i></a>
+<a class="w-inline-block social" href="http://instagram.com/{{ site.owner.instagram }}" target="_blank"> <i class="fa fa-instagram fa-lg"></i></a>
+<a class="w-inline-block social" href="http://github.com/{{ site.owner.github }}" target="_blank"> <i class="fa fa-github fa-lg"></i></a>
+</div>
+</div>
+</header>
