@@ -14,7 +14,7 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 {% assign posttime = post.date | date: "%Y%m%d" %}
 {% if post_number == site.paginate %}<article class="post-short last" role="article" itemscope itemtype="http://schema.org/Article">{% else %}<article class="post-short" role="article" itemscope itemtype="http://schema.org/Article">{% endif %}
 {% if post.featured %}<div class="post featured">{% endif %}
-<h1 class="post-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>{% if post.featured %}<span class="featured-post"><a href="{{ site.url }}/featured">FEATURED</a></span>{% endif %}
+<h1 class="post-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>{% if post.featured %}<span class="featured-post">FEATURED</span>{% endif %}
 <div class="post-meta">
 by <span class="author">{{ site.owner.name }}</span> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y" }}</time> in {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
 </div>
